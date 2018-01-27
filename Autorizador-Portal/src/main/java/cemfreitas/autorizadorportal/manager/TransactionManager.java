@@ -18,6 +18,7 @@ import cemfreitas.autorizadorportal.AutorizadorConstants.TransactionPhase;
 import cemfreitas.autorizadorportal.AutorizadorConstants.TransactionStatus;
 import cemfreitas.autorizadorportal.manager.transaction.TransactionAcknowledge;
 import cemfreitas.autorizadorportal.manager.transaction.TransactionAuthorization;
+import cemfreitas.autorizadorportal.manager.transaction.TransactionCancellation;
 import cemfreitas.autorizadorportal.manager.transaction.TransactionLogon;
 import cemfreitas.autorizadorportal.manager.transaction.TransactionPurchase;
 import cemfreitas.autorizadorportal.manager.transaction.TransactionReversal;
@@ -109,6 +110,9 @@ public class TransactionManager {
 				case "0800":
 					transaction = new TransactionLogon(message, connection);
 					break;
+				case "0400":
+					transaction = new TransactionCancellation(message, connection);
+					break;
 				default://Invalid type. Discard it.
 					StringBuilder sb = new StringBuilder();
 					sb.append("Tipo de transacao invalida: ");
@@ -156,6 +160,9 @@ public class TransactionManager {
 						break;
 					case AutorizadorConstants.TRANSAC_ACKNOWLEDGE_TYPE:
 						status = TransactionStatus.TRANSAC_ACKNOWLEDGE;
+						break;
+					case AutorizadorConstants.TRANSAC_CANCELLED_TYPE:
+						status = TransactionStatus.TRANSAC_CANCELLED;
 						break;
 					default:
 						status = TransactionStatus.TRANSAC_COMPLETED;

@@ -13,7 +13,7 @@ public class AutorizadorConstants {
 	}	
 	
 	public static enum TransactionStatus {
-		TRANSAC_NEW, TRANSAC_REVERTED, TRANSAC_COMPLETED, TRANSAC_NOT_COMPLETED, TRANSAC_LOGON, TRANSAC_ACKNOWLEDGE
+		TRANSAC_NEW, TRANSAC_REVERTED, TRANSAC_COMPLETED, TRANSAC_NOT_COMPLETED, TRANSAC_LOGON, TRANSAC_ACKNOWLEDGE, TRANSAC_CANCELLED
 	}
 
 	public static final String TRANSAC_AUTHORIZATION_TYPE = "0100";
@@ -21,6 +21,7 @@ public class AutorizadorConstants {
 	public static final String TRANSAC_REVERSAL_TYPE = "0420";
 	public static final String TRANSAC_ACKNOWLEDGE_TYPE = "0202";
 	public static final String TRANSAC_LOGON_TYPE = "0800";
+	public static final String TRANSAC_CANCELLED_TYPE = "0400";
 
 	public static enum TransactionPhase {
 		TRANSAC_UNPACK, TRANSAC_COMPLETED, TRANSAC_AUT_ERROR

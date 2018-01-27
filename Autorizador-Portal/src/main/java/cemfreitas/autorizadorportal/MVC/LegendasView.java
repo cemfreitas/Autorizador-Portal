@@ -50,27 +50,31 @@ public class LegendasView extends JPanel {
 		panelLeg2.setAlignmentX(Component.LEFT_ALIGNMENT);
 		panelLeg2.add(Box.createRigidArea(new Dimension(25, 0)));
 		panelLeg2.add(new JLabel("Nova"));
-		panelLeg2.add(Box.createRigidArea(new Dimension(35, 0)));
+		panelLeg2.add(Box.createRigidArea(new Dimension(43, 0)));
 		panelLeg2.add(new JLabel("Reversal (420)"));
 		panelLeg2.add(Box.createRigidArea(new Dimension(15, 0)));
 		panelLeg2.add(new JLabel("Completada"));
-		panelLeg2.add(Box.createRigidArea(new Dimension(15, 0)));
+		panelLeg2.add(Box.createRigidArea(new Dimension(20, 0)));
 		panelLeg2.add(new JLabel("Não Completada"));
 		
 		JPanel panelLeg3 = new JPanel();
 		panelLeg3.setLayout(new BoxLayout(panelLeg3, BoxLayout.LINE_AXIS));
-		panelLeg3.add(Box.createRigidArea(new Dimension(100, 0)));
+		panelLeg3.add(Box.createRigidArea(new Dimension(50, 0)));
 		panelLeg3.add(new TransStatusRect(Color.BLUE));		
 		panelLeg3.add(Box.createRigidArea(new Dimension(30, 0)));
 		panelLeg3.add(new TransStatusRect(Color.LIGHT_GRAY));
+		panelLeg3.add(Box.createRigidArea(new Dimension(30, 0)));
+		panelLeg3.add(new TransStatusRect(Color.GRAY));
 		
 		JPanel panelLeg4 = new JPanel();
 		panelLeg4.setLayout(new BoxLayout(panelLeg4, BoxLayout.LINE_AXIS));
 		panelLeg4.setAlignmentX(Component.LEFT_ALIGNMENT);
-		panelLeg4.add(Box.createRigidArea(new Dimension(70, 0)));
+		panelLeg4.add(Box.createRigidArea(new Dimension(25, 0)));
 		panelLeg4.add(new JLabel("Logon (0800)"));		
-		panelLeg4.add(Box.createRigidArea(new Dimension(62, 0)));
+		panelLeg4.add(Box.createRigidArea(new Dimension(25, 0)));
 		panelLeg4.add(new JLabel("Acknowledge (0202)"));
+		panelLeg4.add(Box.createRigidArea(new Dimension(22, 0)));
+		panelLeg4.add(new JLabel("Cancelada (0400)"));
 
 		panelLeg0.add(Box.createRigidArea(new Dimension(0, 3)));
 		panelLeg0.add(panelLeg1);

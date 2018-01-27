@@ -36,10 +36,11 @@ import cemfreitas.autorizadorportal.utils.Logging;
  * 0.06 Take off the 0D on the end of message.
  * 0.06 0D - Temporary test with 0D .
  * 1.00 Including "Trailing0D_Message" on config file. First production version.
+ * 1.01 Including transaction 0400 (Cancelled).
  */
 
 public class AutorizadorPortal {
-	private static final String version = "1.00";
+	private static final String version = "1.01";
 	private static Model autorizadorModel;
 	private static Controller autorizadorController;
 	private static TransactionManager transactionManager;

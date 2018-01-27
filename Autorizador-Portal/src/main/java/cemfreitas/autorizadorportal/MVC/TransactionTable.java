@@ -63,6 +63,10 @@ public class TransactionTable extends JTable {
 					comp.setBackground(Color.LIGHT_GRAY);
 					comp.setForeground(Color.LIGHT_GRAY);
 					break;
+				case TRANSAC_CANCELLED:
+					comp.setBackground(Color.GRAY);
+					comp.setForeground(Color.GRAY);
+					break;
 				default:
 					comp.setBackground(Color.WHITE);
 				}
